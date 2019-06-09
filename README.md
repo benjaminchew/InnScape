@@ -3,7 +3,12 @@
 
 InnScape is a tool for hostel owners to obtain an overview of topics and sentiments from reviews, and select from suggested response templates to faciliate efficient responding. 
 
-<p align="center>![InnScape](https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/InnScape.png)</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/InnScape.png"></img>
+</p>
+  
+![InnScape](https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/InnScape.png)
+
 
 ### Sentiment Analyses
 
