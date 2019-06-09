@@ -11,6 +11,7 @@ InnScape is a tool for hostel owners to obtain an overview of topics and sentime
 
 ### Sentiment Analyses
 
+
 For appropriate assignment of pre-defined response templates to reviews, it can be helpful to have clear delineations between negative and positive sentiments. The following plot shows the distribution of sentiments scores for two popular sentiment analysis tools, VADER and TextBlob, across more than 100k reviews from Hostelworld. The x-axis ranges from -1 for the most negative sentiments to +1 for the most positive sentiments and the histogram colour indicates the actual hostel ratings. 
 
 
@@ -24,7 +25,8 @@ While both VADER and TextBlob appear to capture the positive correlation between
 
 ### Topic Modeling
 
-There are several popular approaches to topic modeling, one of which is Hierarchical Dirichlet Process (HDP) which is used when no a priori assumptions about the number of topics is known.
+
+There are several popular approaches to topic modeling, one of which is Hierarchical Dirichlet Process (HDP) which is used when no *a priori* assumptions about the number of topics is known.
 
 
 <p align="center">
