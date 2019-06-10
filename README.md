@@ -32,3 +32,12 @@ There are several popular approaches to topic modeling, one of which is Hierarch
 <p align="center">
   <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/HDP.png"></img>
 </p>
+
+
+A useful tool for interactive topic visualization is [pyLDAvis](https://pypi.org/project/pyLDAvis/). From the figure above, it appears that the use of HDP on this review dataset produces 1 large cluster and multiple smaller ones that overlap a fair amount. This is not as useful for the purpose of producing concise and actionable insight, and I next turn to a semi-supervised form of Latent Dirichlet Allocation (LDP) using keywords extracted across labels from a small but annotated [TripAdvisor dataset](http://www.sobigdata.eu/dataset/tripadvisor-annotated-dataset).
+
+A reasonable number of topics was determined by plotting and checking the coherence scores across different number of topics as seen in the plot below.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicNum.png"></img>
+</p>
