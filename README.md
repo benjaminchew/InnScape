@@ -1,7 +1,7 @@
 # InnScape
 *See it. Click it. Sorted.*
 
-[Topic Modeling] (#-Topic-Modeling)
+[Topic Modeling](#-Topic-Modeling)
 
 InnScape is a tool for hostel owners to obtain an overview of topics and sentiments from reviews, and select from suggested response templates to faciliate efficient responding. 
 
@@ -36,7 +36,7 @@ There are several popular approaches to topic modeling, one of which is Hierarch
 </p>
 
 
-A useful tool for interactive topic visualization is [pyLDAvis](https://pypi.org/project/pyLDAvis/). From the figure above, it appears that the use of HDP on this review dataset produces 1 large cluster and multiple smaller ones that overlap a fair amount. This is not as useful for the purpose of producing concise and actionable insight, so I next turn to a semi-supervised form of Latent Dirichlet Allocation (LDA) using keywords extracted across labels from a small but annotated [TripAdvisor dataset](http://www.sobigdata.eu/dataset/tripadvisor-annotated-dataset).
+A useful tool for interactive topic visualization is [pyLDAvis](https://pypi.org/project/pyLDAvis/). From the figure above, it appears that the use of HDP on this review dataset produces 1 large cluster and multiple smaller ones that overlap a fair amount. This is not as useful for the purpose of producing concise and actionable insight, so I next turn to a semi-supervised form of MALLET Latent Dirichlet Allocation (LDA) using keywords extracted across labels from a small but annotated [TripAdvisor dataset](http://www.sobigdata.eu/dataset/tripadvisor-annotated-dataset).
 
 A reasonable number of topics was determined by plotting and checking the coherence scores across different number of topics as seen in the plot below.
 
@@ -46,10 +46,15 @@ A reasonable number of topics was determined by plotting and checking the cohere
 </p>
 
 
-As the scores begin to plateau around 7 topics, I selected to use that number for the LDA.
+As the scores begin to plateau around 7 topics, I elected to use that number in the LDA for parsimony. After converting the MALLET model to LDA using malletmodel2ldamodel, the topics can be visualized and we see that the topics are nicely segregated and non-overlapping. A caveat with topic models like these is that the label for topics are often open to interpretation and in this case, the topic in red appears to be relevant for "location" based on the topic keywords.
 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/gLDA.png"></img>
+</p>
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicText.png"></img>
 </p>
 
