@@ -57,6 +57,6 @@ As the scores begin to plateau around 7 topics, I elected to use that number in 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" style="width:50px"></img>
 </p>
 
