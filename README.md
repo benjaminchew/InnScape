@@ -44,7 +44,7 @@ A reasonable number of topics was determined by plotting and checking the cohere
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicNum.png" width="450"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicNum.png"></img>
 </p>
 
 
@@ -57,6 +57,6 @@ As the scores begin to plateau around 7 topics, I elected to use that number in 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" style="width:50px"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" width="350"></img>
 </p>
 
