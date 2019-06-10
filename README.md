@@ -1,7 +1,7 @@
 # InnScape
 *See it. Click it. Sorted.*
 
-[Topic Modeling](#-Topic-Modeling)
+[Topic Modeling](#Topic-Modeling)
 
 InnScape is a tool for hostel owners to obtain an overview of topics and sentiments from reviews, and select from suggested response templates to faciliate efficient responding. 
 
@@ -55,6 +55,6 @@ As the scores begin to plateau around 7 topics, I elected to use that number in 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicText.png"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png"></img>
 </p>
 
