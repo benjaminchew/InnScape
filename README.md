@@ -6,7 +6,7 @@
 * [Sentiment Analyses](#Sentiment-Analyses)
 * [Topic Modeling](#Topic-Modeling)
 * [Future Directions](#Future-Directions)
-  * [Response Generation using OpenAI's GPT-2](#Response-Generation)
+  * [Response Generation using OpenAI's GPT-2](#response-generation-using-openais-gpt-2)
 
 <br>
 
