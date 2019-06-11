@@ -1,4 +1,4 @@
-# InnScape
+# InnScape 
 *See it. Click it. Sorted.*
 
 ### Contents
@@ -8,7 +8,6 @@
 * [Future Directions](#Future-Directions)
   * [Response Generation using OpenAI's GPT-2](#Response-Generation-using-OpenAI's-GPT-2)
 
-<hr>
 <br>
 
 ### Introduction
@@ -21,7 +20,6 @@ InnScape is a tool for hostel owners to obtain an overview of topics and sentime
 </p>
 <br>
 
-<br>
 ### Sentiment Analyses
 
 For appropriate assignment of pre-defined response templates to reviews, it can be helpful to have clear delineations between negative and positive sentiments. The following plot shows the distribution of sentiments scores for two popular sentiment analysis tools, VADER and TextBlob, across more than 100k reviews from Hostelworld. The x-axis ranges from -1 for the most negative sentiments to +1 for the most positive sentiments and the histogram colour indicates the actual hostel ratings. 
@@ -33,8 +31,8 @@ For appropriate assignment of pre-defined response templates to reviews, it can 
 <br>
 
 While both VADER and TextBlob appear to capture the positive correlation between sentiments and ratings, VADER appears to be better suited for distinguishing between positive and negative sentiments here as the peaks across positive and negative ratings are further apart. 
-
 <br>
+
 ### Topic Modeling
 
 There are several popular approaches to topic modeling, one of which is Hierarchical Dirichlet Process (HDP) which is used when no *a priori* assumptions about the number of topics is known.
@@ -68,6 +66,14 @@ The keywords for all 7 topics are listed below and can be loosely categorized un
 <br>
 <p align="center">
   <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" width="480"></img>
+</p>
+<br>
+
+We can then parse each review through a sequence of pre-processing steps and extract the sentiments and topics at the sentence level. Since the output is continuous, we can define a threshold above or below which we categorize the sentiments as positive or negative. For the InnScape web app, it has been set to 0.4 and -0.4 respectively to increase the likelihood that the highlighting of sentences reflect the true sentiment associated with them. Sentences deemed to be neutral are not highlighted to reduce the need to attend to them. Depending on the overall sentiment of the review, pre-defined templates are suggested.
+
+<br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/Response.png" width="800"></img>
 </p>
 <br>
 
