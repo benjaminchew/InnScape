@@ -1,9 +1,10 @@
 # InnScape
 *See it. Click it. Sorted.*
 
-[Sentiment Analyses](#Sentiment-Analyses)
-
-[Topic Modeling](#Topic-Modeling)
+* [Sentiment Analyses](#Sentiment-Analyses)
+* [Topic Modeling](#Topic-Modeling)
+* [Future Directions](#Future-Directions)
+  * [Response Generation using OpenAI's GPT-2](#Response-Generation-using-OpenAI's-GPT-2)
 
 InnScape is a tool for hostel owners to obtain an overview of topics and sentiments from reviews, and select from suggested response templates to faciliate efficient responding. 
 
@@ -48,7 +49,7 @@ A reasonable number of topics was determined by plotting and checking the cohere
 </p>
 
 
-As the scores begin to plateau around 7 topics, I elected to use that number in the LDA for parsimony. After converting the MALLET model to LDA using malletmodel2ldamodel, the topics can be visualized and we see that the topics are nicely segregated and non-overlapping. A caveat with topic models like these is that the label for topics are often open to interpretation and in this case, the topic in red appears to be relevant for "location" based on the topic keywords.
+As the scores begin to plateau around 7 topics, I elected to use that number in the LDA for parsimony since each additional topic only contributed to an increase of approximately 0.01 in coherence. After converting the MALLET model to LDA using *malletmodel2ldamodel*, the topics can be visualized with pyLDAvis and we see that they are nicely segregated and non-overlapping. A caveat with topic models like this is that the label for topics are often open to interpretation and in this case, the topic in red appears to be relevant for "location" based on the topic keywords.
 
 
 <p align="center">
@@ -56,7 +57,29 @@ As the scores begin to plateau around 7 topics, I elected to use that number in 
 </p>
 
 
+The keywords for all 7 topics are listed below and can be loosely categorized under headings like *Cleanliness/Comfort*, *Service*, *Facilities*, *Others*, *Atmosphere*, *Value*, and *Location*.
+
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" width="350"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/TopicBox.png" width="480"></img>
 </p>
 
+
+### Future Direction(s)
+
+#### Response Generation using OpenAI's GPT-2
+
+Moving away from pre-defined response templates, an exciting alternative would be to explore methods of generating "organic" responses. A potential avenue is OpenAI's Generative Pre-trained Transformer (GPT-2), a model that courted controversy when OpenAI refused to release its full version after deeming it too dangerous. Unlike traditional approaches that use Recurrent Neural Networks to capture sequential dependencies in sequences, the [Transformer](https://arxiv.org/abs/1706.03762) (*Vaswani et al, 2017*) incorporates attention mechanisms.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/Transformer.png" width="380"></img>
+</p>
+
+
+
+After training a smaller version of GPT-2 (345M) on the responses of hostel owners to reviews, the model was able to generate sentences with reasonable levels of comprehension. For example, sample text generated in response to prompts like "service, admin, thanks" include:
+
+* *"Thank you very much for your wonderful feedback. I really appreciate your comments and will forward your review to our staff as well."*
+* *"Thank you so much for your wonderful feedback. We are sorry that you did not enjoy your roommates as much when staying with us."*
+* *"Thank you for sharing your wonderful experience online! We are glad to read that you enjoyed your stay with us!"*
