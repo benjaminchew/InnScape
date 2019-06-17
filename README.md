@@ -20,10 +20,6 @@ InnScape is a tool for hostel owners to obtain an overview of topics and sentime
 </p>
 <br><br>
 
-<p align="center">
-  [![InnScape](https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/InnScape.png)](https://drive.google.com/open?id=1LBFgMX12lgszLhtXaLY11izd2wfAle7C)
-</p>
-
 ### Sentiment Analyses
 
 For appropriate assignment of pre-defined response templates to reviews, it can be helpful to have clear delineations between negative and positive sentiments. The following plot shows the distribution of sentiments scores for two popular sentiment analysis tools, VADER and TextBlob, across more than 100k reviews from Hostelworld. The x-axis ranges from -1 for the most negative sentiments to +1 for the most positive sentiments and the histogram colour indicates the actual hostel ratings. 
