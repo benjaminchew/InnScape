@@ -7,6 +7,7 @@
 * [Topic Modeling](#Topic-Modeling)
 * [Future Directions](#Future-Directions)
   * [Response Generation using OpenAI's GPT-2](#response-generation-using-openais-gpt-2)
+* [Supplementary Information](#Supplementary-Information)
 
 <br>
 
@@ -94,3 +95,45 @@ After training a smaller version of GPT-2 (345M) on the responses of hostel owne
 * *"Thank you very much for your wonderful feedback. I really appreciate your comments and will forward your review to our staff as well."*
 * *"Thank you so much for your wonderful feedback. We are sorry that you did not enjoy your roommates as much when staying with us."*
 * *"Thank you for sharing your wonderful experience online! We are glad to read that you enjoyed your stay with us!"*
+<br><br>
+### Supplementary Information
+
+#### Initial Approach
+
+The original approach I had in mind when thinking about this project was to first find an annotated dataset that I could train a classifier on for the purpose of identifying topics within a review. If this goes well, then pre-processing new reviews and running them through this classifier sould be fairly straightforward.
+
+<br><br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/OriginalApproach.png" width="680"></img>
+</p>
+<br><br>
+
+
+There were approximately 500 reviews in the annotated dataset with sentences broken down across 11 labels, presenting a multi-label classification problem. The fact that many sentences were labeled 'Others' or 'Not Related' further reduces the number of actual samples that the classifer can be trained on for other labels such as 'Food' or 'Location'.
+
+<br><br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/AnnotatedTA.png" width="450"></img>
+</p>
+<br><br>
+
+With the undaunted enthusiasm of someone working on a Natural Language Processing (NLP) for the first time, I sought to reduce this imbalance by collapsing across similar labels and removing labels that were more relevant for hotels but not hostels. A snapshot of the final dataframe is shown below.
+
+
+
+<br><br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/MLCData.png" width="650"></img>
+</p>
+<br><br>
+
+
+Despite using models like Naive Bayes, Logistic Regression, Support Vector Classification, and Random Forest along with problem transformations like Binary Relevance, Classifier Chains, and Label Powersets, classifier accuracy was low with Naive Bayes + Label Powerset performing the best at 40% accuracy. 
+
+<br><br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/FailedApproach.png" width="680"></img>
+</p>
+<br><br>
+
+Having hit a snag at the first step of my initial approach, I next turned to topic modeling using Latent Dirichlet Approach as outlined in the main post.
