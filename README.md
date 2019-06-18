@@ -86,15 +86,15 @@ Moving away from pre-defined response templates, an exciting alternative would b
 
 <br><br>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/Transformer.png" width="380"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/Transformer.png" width="300"></img>
 </p>
 <br><br>
 
-GPT-2 drops the encoder and is a 12-layer decoder-only transformer (*Radford et al, 2018; Figure below*). 
+GPT-2 drops the encoder and is a 12-layer decoder-only transformer (*Radford et al, 2018; Figure below*). Containing a whopping 1.5 billion parameters, it has been trained to predict the next word using 40GB of internet text obtained from 8 million webpages. It applies a multi-headed self-attention operation over some input tokens, and the output distribution over target tokens is produced with a softmax following a series of position-wise feedforward layers. Supervised fine-tuning for specific tasks is done on top of the pre-trained model where the activation for the final transformer block is obtained and fed into an additional linear + softmax output layer.
 
 <br><br>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/GPT.png" width="380"></img>
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/GPT.png" width="680"></img>
 </p>
 <br><br>
 
