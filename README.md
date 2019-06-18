@@ -82,11 +82,19 @@ We can then parse each review through a sequence of pre-processing steps and ext
 
 #### Response Generation using OpenAI's GPT-2
 
-Moving away from pre-defined response templates, an exciting alternative would be to explore methods of generating "organic" responses. A potential avenue is OpenAI's Generative Pre-trained Transformer (GPT-2), a model that courted controversy when OpenAI refused to release its full version after deeming it too dangerous. Unlike traditional approaches that use Recurrent Neural Networks to capture sequential dependencies in sequences, the [Transformer](https://arxiv.org/abs/1706.03762) (*Vaswani et al, 2017*) incorporates attention mechanisms.
+Moving away from pre-defined response templates, an exciting alternative would be to explore methods of generating "organic" responses. A potential avenue is OpenAI's Generative Pre-trained Transformer (GPT-2), a model that courted controversy when OpenAI refused to release its full version after deeming it too dangerous. Unlike traditional approaches that use Recurrent Neural Networks to capture sequential dependencies in sequences, the [Transformer](https://arxiv.org/abs/1706.03762) (*Vaswani et al, 2017; Figure below*) incorporates attention mechanisms.
 
 <br><br>
 <p align="center">
   <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/Transformer.png" width="380"></img>
+</p>
+<br><br>
+
+GPT-2 drops the encoder and is a 12-layer decoder-only transformer (*Radford et al, 2018; Figure below*). 
+
+<br><br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/benjaminchew/InnScape/master/Figures/GPT.png" width="380"></img>
 </p>
 <br><br>
 
