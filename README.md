@@ -103,6 +103,8 @@ After training a smaller version of GPT-2 (345M) on the responses of hostel owne
 * *"Thank you very much for your wonderful feedback. I really appreciate your comments and will forward your review to our staff as well."*
 * *"Thank you so much for your wonderful feedback. We are sorry that you did not enjoy your roommates as much when staying with us."*
 * *"Thank you for sharing your wonderful experience online! We are glad to read that you enjoyed your stay with us!"*
+
+Not having had access to paid AWS Cloud Computing resources as a Data Science Fellow, training was performed using [Google Colab](https://colab.research.google.com/github/ak9250/gpt-2-colab/blob/master/GPT_2.ipynb) with minimally pre-processed data. The next round of pre-processing could involve Named-Entity Recognition (NER) to remove words that are less generalizable like establishment or worker names, or remove scenarios that are overly specific.
 <br><br>
 ### Supplementary Information
 
